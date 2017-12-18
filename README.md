@@ -14,8 +14,8 @@ requires
     php >= 7.0
     openssl (if using alipay)
 ### usage 使用
-    1. authorization
-    ```php
+1. authorization
+```php
         $provider = new \CnOAuth\Provider\Alipay([
             'gatewayUrl' => 'https://openapi.alipay.com/gateway.do',
             'clientId' => '2017090408550236',
@@ -34,9 +34,9 @@ requires
         ]);
 
         header('Location: '.$url);
-    ```
-    2. callback
-    ```php
+```
+2. callback
+```php
     $provider = new \CnOAuth\Provider\Alipay([
         'gatewayUrl' => 'https://openapi.alipay.com/gateway.do',
         'clientId' => '2017090408550236',
@@ -60,7 +60,7 @@ requires
     } else {
         // user cancel auth
     }
-    ```
+```
 
 ### Define Provider
     1. create a provider
