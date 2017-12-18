@@ -5,7 +5,7 @@ namespace CnOAuth\Provider;
 use CnOAuth\Tool\AlipaySign;
 use CnOAuth\AccessToken\AccessToken;
 use Psr\Http\Message\ResponseInterface;
-use CnOAuth\Grant\AlipayAuthroizationCode;
+use CnOAuth\Grant\AlipayAuthorizationCode;
 
 class Alipay extends AbstractProvider
 {
@@ -58,7 +58,7 @@ class Alipay extends AbstractProvider
 
     public function getAuthorizationGrant()
     {
-        return new AlipayAuthroizationCode();
+        return new AlipayAuthorizationCode();
     }
 
     public function getDefaultScopes()

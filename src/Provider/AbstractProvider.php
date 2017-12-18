@@ -11,6 +11,9 @@ use UnexpectedValueException;
 use CnOAuth\AccessToken\AccessToken;
 use CnOAuth\Grant\AbstractGrant;
 
+/**
+ * 服务提供者抽象类
+ */
 abstract class AbstractProvider implements Provider
 {
     /**

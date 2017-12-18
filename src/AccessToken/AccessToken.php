@@ -51,7 +51,7 @@ class AccessToken implements JsonSerializable
     public function __construct(array $attributes = [])
     {
         if (empty($attributes['access_token'])) {
-            throw new InvalidArgumentException('属性数组缺少 "access_token"');
+            throw new InvalidArgumentException('missing "access_token"');
         }
 
         $this->accessToken = $attributes['access_token'];

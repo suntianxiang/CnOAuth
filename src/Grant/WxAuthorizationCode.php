@@ -2,7 +2,7 @@
 
 namespace CnOAuth\Grant;
 
-class WxAuthroizationCode extends AuthroizationCode
+class WxAuthroizationCode extends AuthorizationCode
 {
     public function prepareRequestParameters(array $defaults, array $options)
     {

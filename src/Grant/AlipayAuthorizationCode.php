@@ -4,7 +4,7 @@ namespace CnOAuth\Grant;
 
 use CnOAuth\Tool\AlipaySign;
 
-class AlipayAuthroizationCode extends AuthroizationCode
+class AlipayAuthroizationCode extends AuthorizationCode
 {
     public function getCode()
     {

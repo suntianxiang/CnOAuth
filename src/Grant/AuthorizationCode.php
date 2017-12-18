@@ -2,7 +2,7 @@
 
 namespace CnOAuth\Grant;
 
-abstract class AuthroizationCode extends AbstractGrant
+abstract class AuthorizationCode extends AbstractGrant
 {
     /**
      * @inheritdoc
