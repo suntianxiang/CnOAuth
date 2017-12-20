@@ -16,7 +16,7 @@ class WechatUser extends ResourceOwner
 
     public function getUserName()
     {
-        return $this->data['nickname'];
+        return !empty($this->data['nickname']) ? $this->data['nickname'] : '';
     }
 
     public function getPicture()
