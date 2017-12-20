@@ -14,7 +14,7 @@ class WxAuthroizationCode extends AuthorizationCode
         return $options;
     }
 
-    public function getCode()
+    public function getDefaultCode()
     {
         return isset($_GET['code']) ? $_GET['code'] : null;
     }
