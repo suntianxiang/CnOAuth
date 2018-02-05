@@ -4,21 +4,14 @@ namespace CnOAuth\Provider;
 
 use CnOAuth\AccessToken\AccessToken;
 use Psr\Http\Message\ResponseInterface;
-use CnOAuth\Grant\WxAuthorizationCode;
+use CnOAuth\Grant\WxAuthroizationCode;
 
-class Wechat extends AbstractProvider
+/**
+ * 微信提供者抽象类
+ */
+abstract class Wechat extends AbstractProvider
 {
-    public function getAuthorizationUrl(array $options = [])
-    {
-        $url = parent::getAuthorizationUrl($options);
-
-        return $url.'#wechat_redirect';
-    }
-
-    public function getBaseAuthorizationUrl()
-    {
-        return 'https://open.weixin.qq.com/connect/oauth2/authorize';
-    }
+    public abstract function getBaseAuthorizationUrl();
 
     public function getAuthorizationParams(array $options = [])
     {
@@ -71,7 +64,7 @@ class Wechat extends AbstractProvider
 
     public function getAuthorizationGrant()
     {
-        return new WxAuthorizationCode();
+        return new WxAuthroizationCode();
     }
 
     protected function getAccessTokenMethod()
