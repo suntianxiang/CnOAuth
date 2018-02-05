@@ -11,8 +11,6 @@ use CnOAuth\Grant\WxAuthroizationCode;
  */
 abstract class Wechat extends AbstractProvider
 {
-    public abstract function getBaseAuthorizationUrl();
-
     public function getAuthorizationParams(array $options = [])
     {
         $data = [];
