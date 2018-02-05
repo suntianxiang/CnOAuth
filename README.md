@@ -6,13 +6,12 @@
 3. weibo
 4. eleme
 ----------------
-
+### requires
+    - php >= 7.0
+    - openssl (if using alipay)
 ### install 安装
-using composer
-    composer require suntianxiang/cn-oauth
-requires
-    php >= 7.0
-    openssl (if using alipay)
+    - using composer
+     composer require suntianxiang/cn-oauth
 ### usage 使用
 1. authorization
 ```php
