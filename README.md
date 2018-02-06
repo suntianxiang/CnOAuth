@@ -2,6 +2,7 @@
 -------------
 一个简单、开箱即用的OAuth2客户端
 
+[![TravisCI](https://travis-ci.org/suntianxiang/CnOAuth.svg)](https://travis-ci.org/suntianxiang/CnOAuth)
 ### supported list 支持列表
 1. alipay 支付宝
 2. wechat 微信 公众号 网页登录
