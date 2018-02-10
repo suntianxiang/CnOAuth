@@ -33,7 +33,7 @@ redirect.php
     ]);
 
     $url = $wechat->getAuthorizationUrl([
-        'scope' => $this->getDefaultScopes(),
+        'scope' => $wechat->getDefaultScopes(),
         'state' => 'state'
     ]);
 
