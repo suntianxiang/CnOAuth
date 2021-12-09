@@ -3,6 +3,7 @@
 namespace CnOAuth\Provider;
 
 use CnOAuth\AccessToken\AccessToken;
+use CnOAuth\Exception\ResponseException;
 use Psr\Http\Message\ResponseInterface;
 use CnOAuth\Grant\WxAuthroizationCode;
 
@@ -58,6 +59,9 @@ abstract class Wechat extends AbstractProvider
 
     public function checkResponse($response, $data)
     {
+        if (isset($response['errcode'])) {
+            throw new ResponseException($response['errmsg'], $response['errcode']);
+        }
     }
 
     public function getAuthorizationGrant()
@@ -73,7 +77,7 @@ abstract class Wechat extends AbstractProvider
     public function prepareAccessTokenResponse(array $response)
     {
         $response['refresh_token_expires_in'] = 86400*30;
-        $response['resource_owner_id'] = $response['unionid'];
+        $response['resource_owner_id'] = $response['unionid'] ?? $response['openid'] ?? 0;
 
         return $response;
     }

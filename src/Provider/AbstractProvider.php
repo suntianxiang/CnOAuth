@@ -2,6 +2,7 @@
 
 namespace CnOAuth\Provider;
 
+use CnOAuth\Exception\ResponseException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
@@ -260,6 +261,11 @@ abstract class AbstractProvider implements Provider
 
     abstract public function getUserScope();
 
+    /**
+     * @param array $response
+     * @param array|string $data
+     * @throws ResponseException
+     */
     abstract public function checkResponse($response, $data);
 
     /**
