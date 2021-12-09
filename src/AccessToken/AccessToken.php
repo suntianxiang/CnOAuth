@@ -210,7 +210,7 @@ class AccessToken implements JsonSerializable
         return [
             'access_token' => $this->accessToken,
             'refresh_token' => $this->refreshToken,
-            'expires_in' => $this->expires_in,
+            'expires_in' => $this->expiresIn,
         ];
     }
 
