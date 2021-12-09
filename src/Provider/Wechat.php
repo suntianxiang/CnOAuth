@@ -77,7 +77,7 @@ abstract class Wechat extends AbstractProvider
     public function prepareAccessTokenResponse(array $response)
     {
         $response['refresh_token_expires_in'] = 86400*30;
-        $response['resource_owner_id'] = $response['unionid'];
+        $response['resource_owner_id'] = $response['unionid'] ?? $response['openid'] ?? 0;
 
         return $response;
     }
