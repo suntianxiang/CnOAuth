@@ -5,7 +5,7 @@ namespace CnOAuth\Provider;
 use CnOAuth\AccessToken\AccessToken;
 use CnOAuth\Exception\ResponseException;
 use Psr\Http\Message\ResponseInterface;
-use CnOAuth\Grant\WxAuthroizationCode;
+use CnOAuth\Grant\WxAuthorizationCode;
 
 /**
  * 微信提供者抽象类
@@ -66,7 +66,7 @@ abstract class Wechat extends AbstractProvider
 
     public function getAuthorizationGrant()
     {
-        return new WxAuthroizationCode();
+        return new WxAuthorizationCode();
     }
 
     protected function getAccessTokenMethod()
